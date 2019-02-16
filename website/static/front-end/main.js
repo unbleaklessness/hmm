@@ -67,7 +67,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app\">\n    <app-header></app-header>\n\n    <div class=\"app__container\">\n        <router-outlet></router-outlet>\n    </div>\n</div>"
+module.exports = "<div class=\"app\">\n    <app-header></app-header>\n\n    <div class=\"app__container\">\n        <router-outlet></router-outlet>\n    </div>\n\n    <app-footer></app-footer>\n</div>"
 
 /***/ }),
 
@@ -136,6 +136,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+
 
 
 
@@ -158,7 +160,8 @@ var AppModule = /** @class */ (function () {
                 _header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
                 _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_6__["SidebarComponent"],
                 _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"],
+                _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -170,6 +173,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_11__["MatRadioModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_10__["BrowserAnimationsModule"]
@@ -179,6 +183,62 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/footer/footer.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<footer class=\"footer\">\n  <div class=\"footer__c\">\n    <button mat-button routerLink=\"/\">\n      Hmm\n    </button>\n    <span>\n      © 2019-2019\n    </span>\n  </div>\n  <div class=\"footer__links\">\n    <a class=\"footer__link\">\n      About\n    </a>\n    <a class=\"footer__link\">\n      Terms\n    </a>\n    <a class=\"footer__link\">\n      Developers\n    </a>\n  </div>\n  <div class=\"footer__languages\">\n    <span>\n      Languages:\n    </span>\n    <a class=\"footer__link\">\n      English\n    </a>\n    <a class=\"footer__link\">\n      Русский\n    </a>\n    <a class=\"footer__link\">\n      Українська\n    </a>\n  </div>\n</footer>"
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/footer/footer.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".footer {\n  border-top: 1px solid #d1d1d1;\n  width: 990px;\n  height: 85px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between;\n  margin: 0 auto;\n  font-size: 0.8em; }\n  .footer__c {\n    flex: 1; }\n  .footer__links {\n    flex: 1; }\n  .footer__languages {\n    flex: 1; }\n  .footer__link {\n    margin: 0 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VuYmxlYWtsZXNzbmVzcy9HaXQvaG1tL3dlYnNpdGUvZnJvbnQtZW5kL3NyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2NzcyIsIi9ob21lL3VuYmxlYWtsZXNzbmVzcy9HaXQvaG1tL3dlYnNpdGUvZnJvbnQtZW5kL3NyYy9taXhpbnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLDZCQUF3QztFQUN4QyxZQUFZO0VBQ1osWUFBWTtFQUNaLGFBQWE7RUFDYixxQkFBcUI7RUFDckIsbUJBQW1CO0VBQ25CLDhCQUE4QjtFQUM5QixjQUFjO0VBQ2QsZ0JBQWdCLEVBQUE7RUNWZDtJRFlBLE9BQU8sRUFBQTtFQ1pQO0lEZUEsT0FBTyxFQUFBO0VDZlA7SURrQkEsT0FBTyxFQUFBO0VDbEJQO0lEcUJBLGFBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0IFwiLi4vLi4vbWl4aW5zLnNjc3NcIjtcblxuLmZvb3RlciB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCByZ2IoMjA5LCAyMDksIDIwOSk7XG4gIHdpZHRoOiA5OTBweDtcbiAgaGVpZ2h0OiA4NXB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWZsb3c6IHJvdyBub3dyYXA7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIGZvbnQtc2l6ZTogMC44ZW07XG4gIEBpbmNsdWRlIGUoXCJjXCIpIHtcbiAgICBmbGV4OiAxO1xuICB9XG4gIEBpbmNsdWRlIGUoXCJsaW5rc1wiKSB7XG4gICAgZmxleDogMTtcbiAgfVxuICBAaW5jbHVkZSBlKFwibGFuZ3VhZ2VzXCIpIHtcbiAgICBmbGV4OiAxO1xuICB9XG4gIEBpbmNsdWRlIGUoXCJsaW5rXCIpIHtcbiAgICBtYXJnaW46IDAgNXB4O1xuICB9XG59IiwiQG1peGluIGUoJGVsZW1lbnQpIHtcbiAgICAmX18jeyRlbGVtZW50fSB7XG4gICAgICAgIEBjb250ZW50O1xuICAgIH1cbn1cblxuQG1peGluIG0oJG1vZGlmaWVyKSB7XG4gICAgJi0tI3skbW9kaWZpZXJ9IHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuIl19 */"
+
+/***/ }),
+
+/***/ "./src/app/footer/footer.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/footer/footer.component.ts ***!
+  \********************************************/
+/*! exports provided: FooterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FooterComponent", function() { return FooterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    FooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-footer',
+            template: __webpack_require__(/*! ./footer.component.html */ "./src/app/footer/footer.component.html"),
+            styles: [__webpack_require__(/*! ./footer.component.scss */ "./src/app/footer/footer.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], FooterComponent);
+    return FooterComponent;
 }());
 
 
@@ -247,7 +307,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"login\">\n  <div class=\"login__left-column\">\n    <h1 class=\"login__header\">Hmm for mobile devices</h1>\n    <p class=\"login__description\">Install our official mobile app and stay in touch with your friends anytime and anywhere.</p>\n    <img class=\"login__picture\" src=\"/static/front-end/assets/hmm-big-image.png\">\n    <div class=\"login-row\">\n      <button mat-raised-button class=\"login__app-button\">\n        <mat-icon class=\"login__app-icon\">android</mat-icon>\n        <span>Hmm for Android</span>\n      </button>\n      <button mat-raised-button class=\"login__app-button\">\n        <mat-icon class=\"login__app-icon\">tablet_mac</mat-icon>\n        <span>Hmm for iPhone</span>\n      </button>\n      <button mat-raised-button class=\"login__app-button\">\n        <mat-icon class=\"login__app-icon\">smartphone</mat-icon>\n        <span>Hmm for WP</span>\n      </button>\n    </div>\n  </div>\n  <div class=\"login__right-column\">\n      <mat-card class=\"login__login-card\">\n        <form class=\"login__form\" action=\"/login\" method=\"POST\">\n          <mat-form-field>\n            <input matInput type=\"text\" placeholder=\"Email\" name=\"email\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput type=\"password\" placeholder=\"Password\" name=\"password\">\n          </mat-form-field>\n          <div class=\"login__row\">\n            <button mat-button>\n              Log In\n            </button>\n            <button mat-button>\n                Forgot your password?\n            </button>\n          </div>\n        </form>\n      </mat-card>\n\n      <mat-card class class=\"login__register-card\">\n        <h2 class=\"login__first-time-header\">First time on Hmm?</h2>\n        <span>Sign up for Hmm</span>\n        <br>\n        <form class=\"login__form\" action=\"/register\" method=\"POST\">\n          <mat-form-field>\n            <input matInput type=\"text\" placeholder=\"Your first name\" name=\"first_name\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput type=\"text\" placeholder=\"Your last name\" name=\"last_name\">\n          </mat-form-field>\n          <br>\n          <div class=\"login__gender-section\">\n              <span>Your gender</span>\n              <mat-radio-button value=\"1\">Female</mat-radio-button>\n              <mat-radio-button value=\"2\">Male</mat-radio-button>\n          </div>\n          <br>\n          <div class=\"login__row\">\n            <button mat-button>\n              Log In\n            </button>\n            <button mat-button>\n                Forgot your password?\n            </button>\n          </div>\n        </form>\n      </mat-card>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -258,7 +318,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = ".login {\n  margin-top: 125px;\n  display: flex;\n  flex-flow: row nowrap;\n  height: 800px; }\n  .login__left-column {\n    flex-grow: 5;\n    margin-right: 10px; }\n  .login__right-column {\n    flex-grow: 1;\n    margin-left: 10px; }\n  .login__form {\n    display: flex;\n    flex-flow: column nowrap; }\n  .login__row {\n    display: flex;\n    flex-flow: row nowrap;\n    justify-content: center; }\n  .login__register-card {\n    margin: 10px 0 0 10px;\n    display: flex;\n    flex-flow: column nowrap;\n    align-items: center; }\n  .login__login-card {\n    margin: 0 0 10px 10px; }\n  .login__left-column {\n    display: flex;\n    flex-flow: column nowrap;\n    align-items: center; }\n  .login__picture {\n    margin: 60px 0;\n    width: 500px; }\n  .login__header {\n    margin: 0 0 10px 0; }\n  .login__description {\n    width: 80%;\n    text-align: center;\n    margin: 0; }\n  .login__app-icon {\n    margin-right: 10px; }\n  .login__app-button {\n    margin: 0 10px; }\n  .login__first-time-header {\n    margin: 0; }\n  .login__gender-section {\n    display: flex; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VuYmxlYWtsZXNzbmVzcy9HaXQvaG1tL3dlYnNpdGUvZnJvbnQtZW5kL3NyYy9hcHAvbG9naW4vbG9naW4uY29tcG9uZW50LnNjc3MiLCIvaG9tZS91bmJsZWFrbGVzc25lc3MvR2l0L2htbS93ZWJzaXRlL2Zyb250LWVuZC9zcmMvbWl4aW5zLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBSUE7RUFDSSxpQkFBaUI7RUFDakIsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixhQUFhLEVBQUE7RUNQYjtJRFNJLFlBQVk7SUFDWixrQkFUTSxFQUFBO0VDRFY7SURhSSxZQUFZO0lBQ1osaUJBYk0sRUFBQTtFQ0RWO0lEaUJJLGFBQWE7SUFDYix3QkFBd0IsRUFBQTtFQ2xCNUI7SURxQkksYUFBYTtJQUNiLHFCQUFxQjtJQUNyQix1QkFBdUIsRUFBQTtFQ3ZCM0I7SUQwQkkscUJBekJNO0lBMEJOLGFBQWE7SUFDYix3QkFBd0I7SUFDeEIsbUJBQW1CLEVBQUE7RUM3QnZCO0lEZ0NJLHFCQS9CTSxFQUFBO0VDRFY7SURtQ0ksYUFBYTtJQUNiLHdCQUF3QjtJQUN4QixtQkFBbUIsRUFBQTtFQ3JDdkI7SUR3Q0ksY0FBYztJQUNkLFlBQVksRUFBQTtFQ3pDaEI7SUQ0Q0ksa0JBQXNCLEVBQUE7RUM1QzFCO0lEK0NJLFVBQVU7SUFDVixrQkFBa0I7SUFDbEIsU0FBUyxFQUFBO0VDakRiO0lEb0RJLGtCQUFrQixFQUFBO0VDcER0QjtJRHVESSxjQXRETSxFQUFBO0VDRFY7SUQwREksU0FBUyxFQUFBO0VDMURiO0lENkRJLGFBQWEsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCBcIi4uLy4uL21peGlucy5zY3NzXCI7XG5cbiRzcGFjaW5nOiAxMHB4O1xuXG4ubG9naW4ge1xuICAgIG1hcmdpbi10b3A6IDEyNXB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1mbG93OiByb3cgbm93cmFwO1xuICAgIGhlaWdodDogODAwcHg7XG4gICAgQGluY2x1ZGUgZShcImxlZnQtY29sdW1uXCIpIHtcbiAgICAgICAgZmxleC1ncm93OiA1O1xuICAgICAgICBtYXJnaW4tcmlnaHQ6ICRzcGFjaW5nO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwicmlnaHQtY29sdW1uXCIpIHtcbiAgICAgICAgZmxleC1ncm93OiAxO1xuICAgICAgICBtYXJnaW4tbGVmdDogJHNwYWNpbmc7XG4gICAgfVxuICAgIEBpbmNsdWRlIGUoXCJmb3JtXCIpIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiBjb2x1bW4gbm93cmFwO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwicm93XCIpIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiByb3cgbm93cmFwO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICB9XG4gICAgQGluY2x1ZGUgZShcInJlZ2lzdGVyLWNhcmRcIikge1xuICAgICAgICBtYXJnaW46ICRzcGFjaW5nIDAgMCAkc3BhY2luZztcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgZmxleC1mbG93OiBjb2x1bW4gbm93cmFwO1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwibG9naW4tY2FyZFwiKSB7XG4gICAgICAgIG1hcmdpbjogMCAwICRzcGFjaW5nICRzcGFjaW5nO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwibGVmdC1jb2x1bW5cIikge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBmbGV4LWZsb3c6IGNvbHVtbiBub3dyYXA7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgfVxuICAgIEBpbmNsdWRlIGUoXCJwaWN0dXJlXCIpIHtcbiAgICAgICAgbWFyZ2luOiA2MHB4IDA7XG4gICAgICAgIHdpZHRoOiA1MDBweDtcbiAgICB9XG4gICAgQGluY2x1ZGUgZShcImhlYWRlclwiKSB7XG4gICAgICAgIG1hcmdpbjogMCAwICRzcGFjaW5nIDA7XG4gICAgfVxuICAgIEBpbmNsdWRlIGUoXCJkZXNjcmlwdGlvblwiKSB7XG4gICAgICAgIHdpZHRoOiA4MCU7XG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwiYXBwLWljb25cIikge1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG4gICAgfVxuICAgIEBpbmNsdWRlIGUoXCJhcHAtYnV0dG9uXCIpIHtcbiAgICAgICAgbWFyZ2luOiAwICRzcGFjaW5nO1xuICAgIH1cbiAgICBAaW5jbHVkZSBlKFwiZmlyc3QtdGltZS1oZWFkZXJcIikge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgfVxuICAgIEBpbmNsdWRlIGUoXCJnZW5kZXItc2VjdGlvblwiKSB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIFxuICAgIH1cbn0iLCJAbWl4aW4gZSgkZWxlbWVudCkge1xuICAgICZfXyN7JGVsZW1lbnR9IHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuXG5AbWl4aW4gbSgkbW9kaWZpZXIpIHtcbiAgICAmLS0jeyRtb2RpZmllcn0ge1xuICAgICAgICBAY29udGVudDtcbiAgICB9XG59XG4iXX0= */"
 
 /***/ }),
 

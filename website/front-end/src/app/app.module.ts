@@ -17,8 +17,10 @@ import {
   MatMenuModule,
   MatIconModule,
   MatToolbarModule,
-  MatInputModule
+  MatInputModule,
+  MatRadioModule
 } from '@angular/material';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {
     HeaderComponent,
     SidebarComponent,
     LoginComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import {
     MatIconModule,
     MatToolbarModule,
     MatInputModule,
+    MatRadioModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule

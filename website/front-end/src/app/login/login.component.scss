@@ -1,0 +1,66 @@
+@import "../../mixins.scss";
+
+$spacing: 10px;
+
+.login {
+    margin-top: 125px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 800px;
+    @include e("left-column") {
+        flex-grow: 5;
+        margin-right: $spacing;
+    }
+    @include e("right-column") {
+        flex-grow: 1;
+        margin-left: $spacing;
+    }
+    @include e("form") {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    @include e("row") {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    @include e("register-card") {
+        margin: $spacing 0 0 $spacing;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    @include e("login-card") {
+        margin: 0 0 $spacing $spacing;
+    }
+    @include e("left-column") {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    @include e("picture") {
+        margin: 60px 0;
+        width: 500px;
+    }
+    @include e("header") {
+        margin: 0 0 $spacing 0;
+    }
+    @include e("description") {
+        width: 80%;
+        text-align: center;
+        margin: 0;
+    }
+    @include e("app-icon") {
+        margin-right: 10px;
+    }
+    @include e("app-button") {
+        margin: 0 $spacing;
+    }
+    @include e("first-time-header") {
+        margin: 0;
+    }
+    @include e("gender-section") {
+        display: flex;
+        
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../mixins.scss";
+
+.footer {
+  border-top: 1px solid rgb(209, 209, 209);
+  width: 990px;
+  height: 85px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 0.8em;
+  @include e("c") {
+    flex: 1;
+  }
+  @include e("links") {
+    flex: 1;
+  }
+  @include e("languages") {
+    flex: 1;
+  }
+  @include e("link") {
+    margin: 0 5px;
+  }
+}

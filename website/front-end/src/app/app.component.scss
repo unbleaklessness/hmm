@@ -1,0 +1,8 @@
+@import "../mixins.scss";
+
+.app {
+    @include e("container") {
+        width: 990px;
+        margin: 15px auto;
+    }
+}
